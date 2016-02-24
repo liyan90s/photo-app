@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # the :controllers => {:registrations => 'registrations'} means when working on the registrations, look
+  # at the registrations_controller.rb first, then go to the devise registrations controller
+  devise_for :users, :controllers => { :registrations => 'registrations' }
+
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
