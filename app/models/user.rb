@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_one :payment
   accepts_nested_attributes_for :payment    # when saving a user, allows the payment attributes to be saved
+  has_many :images
 end
